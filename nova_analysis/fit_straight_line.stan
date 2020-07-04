@@ -50,7 +50,7 @@ generated quantities {
   // create posterior samples for PPC
   for (n in 1:N) {
     
-    ppc[n] = normal_rng(a + b * x[N], y_err[N]);
+    ppc[n] = normal_rng(a + b * x[n], y_err[n]);
 
   }
 
