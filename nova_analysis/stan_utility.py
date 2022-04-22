@@ -1,4 +1,4 @@
-import pystan
+import stan
 import pickle
 import numpy
 
