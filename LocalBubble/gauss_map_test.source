@@ -1,0 +1,24 @@
+# This example shows how to use the FlatMap source distribution
+
+
+# Global parameters:
+Version               1
+Geometry              /Users/thomassiegert/MEGAlib/massmodel_3DeadDets_0_5_8/COSI.DetectorHead.geo.setup
+
+# Physics list
+PhysicsListEM                        LivermorePol
+
+# Output formats
+StoreSimulationInfo                  all
+
+# Run & source parameters
+Run My2DProfileBeam
+My2DProfileBeam.FileName                      gauss_map_test
+My2DProfileBeam.Time                          1467158623
+MyRun.OrientationSky			      Galactic File NoLoop /Users/thomassiegert/data/COSI/Simulations/gauss_map_test/OP_160628_FullDay.ori
+
+My2DProfileBeam.Source My2DProfileBeamSource
+My2DProfileBeamSource.ParticleType            1
+My2DProfileBeamSource.Beam                    FarFieldNormalizedEnergyBeamFluxFunction gauss_map.dat
+My2DProfileBeamSource.Spectrum                Mono 1809.0
+#My2DProfileBeamSource.Flux                    1.0
